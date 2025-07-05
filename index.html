@@ -1,0 +1,297 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <div style="text-align: center; margin-top: 15px;">
+  <input type="text" id="searchInput" placeholder="Search MOD..." 
+    style="padding: 10px 15px; border-radius: 25px; border: none; width: 70%; max-width: 300px; font-size: 16px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); outline: none;">
+  <button onclick="searchApp()" 
+    style="padding: 10px 18px; border: none; background: linear-gradient(45deg, #4CAF50, #2e8b57); color: white; border-radius: 25px; font-weight: bold; margin-left: 10px; cursor: pointer;">Search</button>
+</div>
+  <title>AAKASH MODS</title>
+  <style>
+  .search-container {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 1002;
+}
+
+.search-icon {
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+  background: #333;
+  padding: 6px 10px;
+  border-radius: 10px;
+}
+
+#searchBox {
+  margin-top: 5px;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  width: 160px;
+}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: linear-gradient(-45deg, #ff0080, #ff8c00, #40e0d0, #8a2be2);
+      background-size: 400% 400%;
+      animation: gradientBG 10s ease infinite;
+    }
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+    .header {
+      padding: 20px;
+      text-align: center;
+      font-size: 32px;
+      font-weight: bold;
+      animation: blink 1.5s infinite linear;
+      color: #fff;
+    }
+    @keyframes blink {
+      0% {color: red;}
+      25% {color: orange;}
+      50% {color: green;}
+      75% {color: blue;}
+      100% {color: red;}
+    }
+    .tagline {
+      text-align: center;
+      color: white;
+      margin-bottom: 20px;
+    }
+    .menu-toggle {
+      position: absolute;
+      left: 15px;
+      top: 20px;
+      font-size: 30px;
+      cursor: pointer;
+      color: white;
+      z-index: 1001;
+    }
+    .menu {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 250px;
+      height: 100%;
+      background: #111;
+      color: white;
+      padding: 20px;
+      transition: left 0.3s ease;
+      z-index: 1000;
+    }
+    .menu.open {
+      left: 0;
+    }
+    .menu img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin: 0 auto 20px;
+      display: block;
+    }
+    .menu a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      margin: 10px 0;
+      font-size: 18px;
+    }
+    .menu a:hover {
+      text-decoration: underline;
+    }
+    .close-btn {
+      text-align: right;
+      font-size: 24px;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+    .card {
+      margin: 20px;
+      padding: 20px;
+      border-radius: 20px;
+      background: linear-gradient(to right, #c9d6ff, #e2e2e2);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .card img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: auto;
+    }
+    .app-title {
+      font-size: 22px;
+      margin-top: 10px;
+      font-weight: bold;
+      text-align: left;
+    }
+    .details {
+      margin-top: 10px;
+      text-align: left;
+      line-height: 1.6;
+      white-space: pre-wrap;
+    }
+    .download-btn {
+      margin-top: 15px;
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: green;
+      color: white;
+      border-radius: 10px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <div class="search-container">
+  <span class="search-icon" onclick="toggleSearch()">🔍</span>
+  <input type="text" id="searchBox" placeholder="Search MOD..." style="display: none;">
+</div>
+  <div class="menu" id="sidebar">
+    <div class="close-btn" onclick="toggleMenu()">❌</div>
+    <img src="Logo.png" alt="Logo">
+    <a href="https://instagram.com/Aakash.Mods" target="_blank">📸 Instagram</a>
+    <a href="https://t.me/Aakash_Mods" target="_blank">📍 Telegram</a>
+    <a href="https://youtube.com/@AakashMods" target="_blank">▶️ YouTube</a>
+  </div>  <div class="header">AAKASH MODS</div>
+  <div class="tagline">🔥 100% Working | No Ads | Latest MOD APKs 🔥</div>  <!-- Each app card below -->  <div class="card">
+    <img src="YouTube.png" alt="YouTube Pro">
+    <div class="app-title">YouTube Pro</div>
+    <div class="details">
+➡️Premium/Vip Features Unlocked 🔒
+➡️All Ads Removed / Adfree
+➡️Buffering Error Fixed
+➡️Background Play Support
+➡️Compatible for all Devices
+➡️Optimized & Resources Cleaned
+➡️All Debug Info Removed
+➡️Stable Mods Bug Fix
+    </div>
+    <a class="download-btn" href="https://yourlink.com/YouTubePro.apk" target="_blank">↓ Download Now</a>
+  </div>  <div class="card">
+    <img src="InstaPro.png" alt="InstaPro">
+    <div class="app-title">InstaPro</div>
+    <div class="details">
+➡️Download Reel Cover Image
+➡️Hidden Features
+➡️Msg Long Click crash
+➡️Story autoskip
+➡️Download Multiple Post
+➡️Many More.
+    </div>
+    <a class="download-btn" href="https://yourlink.com/InstaPro.apk" target="_blank">↓ Download Now</a>
+  </div>  <div class="card">
+    <img src="Snapchat.png" alt="Snapchat">
+    <div class="app-title">Snapchat</div>
+    <div class="details">
+➡️VIP | Paid Features Unlocked 🥇
+➡️Stable mod
+➡️Debug info removed
+➡️Multiple languages available
+➡️No active trackers or advertisements
+➡️Requires android 5.0 and up
+➡️CPUs arch: armeabi-v7a, arm64-v8a
+➡️Optimized and cleaned resources for fast loading.
+    </div>
+    <a class="download-btn" href="https://yourlink.com/Snapchat.apk" target="_blank">↓ Download Now</a>
+  </div>  <div class="card">
+    <img src="PicsArt.png" alt="PicsArt">
+    <div class="app-title">PicsArt</div>
+    <div class="details">
+➡️Premium/Gold Features Unlocked 🔒
+➡️The best all-in-one photo & video editor 
+➡️AI Avatar not works as it's server-sided
+➡️All Ads Removed / Adfree
+➡️Sign-in No Required 
+➡️Optimized & Cleaned Apk
+➡️All Debug Info Removed
+➡️Support All Android Version
+➡️AI features require login 
+#PicsArt Photo Video Editor Apps
+    </div>
+    <a class="download-btn" href="https://yourlink.com/PicsArt.apk" target="_blank">↓ Download Now</a>
+  </div>  <div class="card">
+    <img src="Capcut.png" alt="Capcut Pro">
+    <div class="app-title">Capcut Pro</div>
+    <div class="details">
+➡️Premium/Pro Features Unlocked 🔒
+➡️All Ads Removed / Adfree
+➡️Fixed Export issues
+➡️Support 4K Export Video 
+➡️All Features Working 
+➡️Compatible for all Devices
+➡️Optimized & Resources Cleaned
+➡️All Debug Info Removed
+Note:
+⚠️It is mandatory to enable business mode from settings and sign in with Facebook and use VPN
+    </div>
+    <a class="download-btn" href="https://yourlink.com/CapcutPro.apk" target="_blank">↓ Download Now</a>
+  </div>  <div class="card">
+    <img src="Truecaller.png" alt="Truecaller Gold">
+    <div class="app-title">Truecaller Gold</div>
+    <div class="details">
+➡️Premium Gold Features Unlocked 🔒
+➡️Gold Amoled Theme Added 
+➡️All Ads Removed / Adfree
+➡️Block spam + scam calls and SMS
+➡️Who Viewed My Profile Unlocked 
+➡️Ghost Call Unlocked 
+➡️Disabled Update Popup Banner 
+➡️Compatible for all Devices
+➡️Optimized & Resources Cleaned
+➡️All Debug Info Removed
+    </div>
+    <a class="download-btn" href="https://yourlink.com/TruecallerGold.apk" target="_blank">↓ Download Now</a>
+  </div><script>
+</script>
+
+<footer style="text-align:center; padding: 20px; color: white; background: linear-gradient(45deg, #ff5e62, #ff9966); font-family: 'cursive'; margin-top: 30px;">
+  © 2025 All Rights Reserved | AAKASH MODS
+</footer>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('sidebar');
+    menu.classList.toggle('open');
+  }
+  <script>
+  function toggleSearch() {
+    const searchBox = document.getElementById("searchBox");
+    if (searchBox.style.display === "none" || searchBox.style.display === "") {
+      searchBox.style.display = "block";
+      searchBox.focus();
+    } else {
+      searchBox.style.display = "none";
+    }
+  }
+</script>
+
+  function searchApp() {
+    const input = document.getElementById("searchInput").value.toLowerCase();
+    const cards = document.querySelectorAll(".card");
+
+    cards.forEach(card => {
+      const title = card.querySelector(".app-title").textContent.toLowerCase();
+      if (title.includes(input)) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  }
+</script>
+
+</body>
+</html>
